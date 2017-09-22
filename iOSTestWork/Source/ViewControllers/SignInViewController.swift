@@ -15,6 +15,9 @@ public class SignInViewController : UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad();
         
+        self.title = "Авторизация";
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem?.title = "";
+        
         NotificationCenter.default.addObserver(self, selector: #selector(SignInViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(SignInViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Добро пожаловать-->
+        <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="iOSTestWork" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,7 +35,9 @@
                             <constraint firstItem="Bd3-xw-MZf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="d1a-3P-JSN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Добро пожаловать" id="IbC-B0-hBl"/>
+                    <navigationItem key="navigationItem" id="IbC-B0-hBl">
+                        <barButtonItem key="backBarButtonItem" title=" " id="gca-d7-yOC"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
