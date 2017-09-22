@@ -40,10 +40,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="Tl6-e6-1cg">
             <objects>
-                <viewController id="9SP-qc-RyP" sceneMemberID="viewController">
+                <viewController id="9SP-qc-RyP" customClass="SignInViewController" customModule="iOSTestWork" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="erz-2M-Iko"/>
                         <viewControllerLayoutGuide type="bottom" id="gqh-uF-Syu"/>
@@ -196,6 +196,9 @@
                             <constraint firstItem="8vc-uf-nxn" firstAttribute="leading" secondItem="4tR-L7-y0R" secondAttribute="leading" id="squ-SB-Ohq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerViewBottomConstraint" destination="n2X-gd-h7n" id="thU-0u-5He"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97v-zU-rTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

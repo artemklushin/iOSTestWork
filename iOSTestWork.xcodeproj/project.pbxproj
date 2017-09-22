@@ -13,6 +13,7 @@
 		8E50003E1F7558D90029E351 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E50003C1F7558D90029E351 /* LaunchScreen.storyboard */; };
 		8E5000481F75617F0029E351 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5000471F75617F0029E351 /* RoundedButton.swift */; };
 		8E50004B1F75640B0029E351 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50004A1F75640B0029E351 /* WelcomeViewController.swift */; };
+		8E50004F1F75665C0029E351 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50004E1F75665C0029E351 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8E50003F1F7558D90029E351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E5000471F75617F0029E351 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		8E50004A1F75640B0029E351 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = Source/ViewControllers/WelcomeViewController.swift; sourceTree = "<group>"; };
+		8E50004E1F75665C0029E351 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = Source/ViewControllers/SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				8E50004A1F75640B0029E351 /* WelcomeViewController.swift */,
+				8E50004E1F75665C0029E351 /* SignInViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E50004F1F75665C0029E351 /* SignInViewController.swift in Sources */,
 				8E50004B1F75640B0029E351 /* WelcomeViewController.swift in Sources */,
 				8E5000481F75617F0029E351 /* RoundedButton.swift in Sources */,
 				8E5000341F7558D90029E351 /* AppDelegate.swift in Sources */,
