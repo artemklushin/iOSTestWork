@@ -9,10 +9,8 @@
 import UIKit
 
 public class WelcomeViewController : UIViewController {
-    let AuthorizationScreenSegue = "authScreenSegue";
     
-    
-    @IBAction func authButtonTapped(_ sender: Any) {
-        self.performSegue(withIdentifier: self.AuthorizationScreenSegue, sender: nil);
+    public override func viewDidLoad() {
+        super.viewDidLoad();
     }
 }
