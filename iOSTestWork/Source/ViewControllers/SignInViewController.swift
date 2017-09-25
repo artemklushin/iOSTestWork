@@ -12,6 +12,12 @@ public class SignInViewController : UIViewController {
     
     @IBOutlet weak var containerViewBottomConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passTextField: UITextField!
+    
+    
+    var authorizationManager: AuthorizationProtocol;
+    
     public override func viewDidLoad() {
         super.viewDidLoad();
         
@@ -20,6 +26,8 @@ public class SignInViewController : UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(SignInViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(SignInViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        authorizationManager = LocalAuthorization();
     }
     
     @objc private func keyboardWillShow(notification: Notification) {
@@ -45,4 +53,45 @@ public class SignInViewController : UIViewController {
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true);
     }
+    
+    @IBAction func signInButtonTapped(_ sender: Any) {
+        
+        var email: String = "";
+        var pass: String = "";
+        
+        if (emailTextField.text != nil)
+        {
+            email = emailTextField.text!;
+        }
+        
+        
+        if (passTextField.text != nil)
+        {
+            pass = passTextField.text!;
+        }
+        
+        if (authorizationManager.canSignIn(email: email, password: pass))
+        {
+            
+        }
+        else
+        {
+            let emailReason = authorizationManager.validateEmail(email: email);
+            if (!emailReason.isEmpty)
+            {
+                let invalidEmailAlert = UIAlertController(title: "Ошибка", message:  emailReason, preferredStyle: .alert);
+                present(invalidEmailAlert, animated: true, completion: nil);
+                return;
+            }
+            
+            let passReason = authorizationManager.validatePassWord(password: pass);
+            if (!passReason.isEmpty)
+            {
+                let invalidPassAlert = UIAlertController(title: "Ошибка", message: passReason, preferredStyle: .alert);
+                present(invalidPassAlert, animated: true, completion: nil);
+                return;
+            }
+        }
+    }
+    
 }

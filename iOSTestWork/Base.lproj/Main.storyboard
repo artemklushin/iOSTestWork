@@ -141,6 +141,9 @@
                                                         <real key="value" value="22"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="signInButtonTapped:" destination="9SP-qc-RyP" eventType="touchUpInside" id="exP-CI-jrC"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHu-SJ-ZYD" userLabel="SignUpButton">
                                                 <rect key="frame" x="66" y="199" width="242" height="18"/>
@@ -200,6 +203,8 @@
                     </view>
                     <connections>
                         <outlet property="containerViewBottomConstraint" destination="n2X-gd-h7n" id="thU-0u-5He"/>
+                        <outlet property="emailTextField" destination="FPr-99-H6e" id="H8m-Ax-OTy"/>
+                        <outlet property="passTextField" destination="48E-A7-Scp" id="rb1-TH-Svj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97v-zU-rTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
