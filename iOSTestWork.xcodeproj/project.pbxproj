@@ -17,6 +17,8 @@
 		8E50004F1F75665C0029E351 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50004E1F75665C0029E351 /* SignInViewController.swift */; };
 		8E5000551F791A1B0029E351 /* AuthorizationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5000541F791A1B0029E351 /* AuthorizationProtocol.swift */; };
 		8E5000571F791BC20029E351 /* LocalAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5000561F791BC20029E351 /* LocalAuthorization.swift */; };
+		8E50005A1F792EDE0029E351 /* WheatherManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5000591F792EDE0029E351 /* WheatherManagerProtocol.swift */; };
+		8E50005C1F792F5F0029E351 /* OpenWeatherMapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50005B1F792F5F0029E351 /* OpenWeatherMapManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		8E50004E1F75665C0029E351 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = Source/ViewControllers/SignInViewController.swift; sourceTree = "<group>"; };
 		8E5000541F791A1B0029E351 /* AuthorizationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthorizationProtocol.swift; path = Source/Core/Authorization/AuthorizationProtocol.swift; sourceTree = "<group>"; };
 		8E5000561F791BC20029E351 /* LocalAuthorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalAuthorization.swift; path = Source/Core/Authorization/LocalAuthorization.swift; sourceTree = "<group>"; };
+		8E5000591F792EDE0029E351 /* WheatherManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WheatherManagerProtocol.swift; path = Source/Core/WeatherManager/WheatherManagerProtocol.swift; sourceTree = "<group>"; };
+		8E50005B1F792F5F0029E351 /* OpenWeatherMapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenWeatherMapManager.swift; path = Source/Core/WeatherManager/OpenWeatherMapManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 		8E5000501F79193B0029E351 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				8E5000581F792EA70029E351 /* WeatherManager */,
 				8E5000511F79194D0029E351 /* Authorization */,
 			);
 			name = Core;
@@ -129,6 +134,15 @@
 				8E5000561F791BC20029E351 /* LocalAuthorization.swift */,
 			);
 			name = Authorization;
+			sourceTree = "<group>";
+		};
+		8E5000581F792EA70029E351 /* WeatherManager */ = {
+			isa = PBXGroup;
+			children = (
+				8E5000591F792EDE0029E351 /* WheatherManagerProtocol.swift */,
+				8E50005B1F792F5F0029E351 /* OpenWeatherMapManager.swift */,
+			);
+			name = WeatherManager;
 			sourceTree = "<group>";
 		};
 		EA15370DD5825E42B240EE0D /* Pods */ = {
@@ -265,10 +279,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E50004F1F75665C0029E351 /* SignInViewController.swift in Sources */,
+				8E50005C1F792F5F0029E351 /* OpenWeatherMapManager.swift in Sources */,
 				8E5000571F791BC20029E351 /* LocalAuthorization.swift in Sources */,
 				8E50004B1F75640B0029E351 /* WelcomeViewController.swift in Sources */,
 				8E5000551F791A1B0029E351 /* AuthorizationProtocol.swift in Sources */,
 				8E5000481F75617F0029E351 /* RoundedButton.swift in Sources */,
+				8E50005A1F792EDE0029E351 /* WheatherManagerProtocol.swift in Sources */,
 				8E5000341F7558D90029E351 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
