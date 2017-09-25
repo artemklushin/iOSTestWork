@@ -15,6 +15,8 @@
 		8E5000481F75617F0029E351 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5000471F75617F0029E351 /* RoundedButton.swift */; };
 		8E50004B1F75640B0029E351 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50004A1F75640B0029E351 /* WelcomeViewController.swift */; };
 		8E50004F1F75665C0029E351 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50004E1F75665C0029E351 /* SignInViewController.swift */; };
+		8E5000551F791A1B0029E351 /* AuthorizationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5000541F791A1B0029E351 /* AuthorizationProtocol.swift */; };
+		8E5000571F791BC20029E351 /* LocalAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5000561F791BC20029E351 /* LocalAuthorization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		8E5000471F75617F0029E351 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		8E50004A1F75640B0029E351 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = Source/ViewControllers/WelcomeViewController.swift; sourceTree = "<group>"; };
 		8E50004E1F75665C0029E351 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = Source/ViewControllers/SignInViewController.swift; sourceTree = "<group>"; };
+		8E5000541F791A1B0029E351 /* AuthorizationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthorizationProtocol.swift; path = Source/Core/Authorization/AuthorizationProtocol.swift; sourceTree = "<group>"; };
+		8E5000561F791BC20029E351 /* LocalAuthorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalAuthorization.swift; path = Source/Core/Authorization/LocalAuthorization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 		8E5000451F75613F0029E351 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				8E5000501F79193B0029E351 /* Core */,
 				8E5000491F7563B40029E351 /* ViewControllers */,
 				8E5000461F7561490029E351 /* UIKit */,
 			);
@@ -107,6 +112,23 @@
 				8E50004E1F75665C0029E351 /* SignInViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8E5000501F79193B0029E351 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8E5000511F79194D0029E351 /* Authorization */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		8E5000511F79194D0029E351 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				8E5000541F791A1B0029E351 /* AuthorizationProtocol.swift */,
+				8E5000561F791BC20029E351 /* LocalAuthorization.swift */,
+			);
+			name = Authorization;
 			sourceTree = "<group>";
 		};
 		EA15370DD5825E42B240EE0D /* Pods */ = {
@@ -243,7 +265,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E50004F1F75665C0029E351 /* SignInViewController.swift in Sources */,
+				8E5000571F791BC20029E351 /* LocalAuthorization.swift in Sources */,
 				8E50004B1F75640B0029E351 /* WelcomeViewController.swift in Sources */,
+				8E5000551F791A1B0029E351 /* AuthorizationProtocol.swift in Sources */,
 				8E5000481F75617F0029E351 /* RoundedButton.swift in Sources */,
 				8E5000341F7558D90029E351 /* AppDelegate.swift in Sources */,
 			);
