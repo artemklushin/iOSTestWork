@@ -17,6 +17,7 @@ public class SignInViewController : UIViewController {
     
     
     var authorizationManager: AuthorizationProtocol? = nil;
+    var weatherManager: WeatherManagerProtocol? = nil;
     
     public override func viewDidLoad() {
         super.viewDidLoad();
@@ -28,6 +29,7 @@ public class SignInViewController : UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(SignInViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
         authorizationManager = LocalAuthorization();
+        weatherManager = OpenWeatherMapManager();
     }
     
     @objc private func keyboardWillShow(notification: Notification) {
@@ -72,7 +74,11 @@ public class SignInViewController : UIViewController {
         
         if (authorizationManager!.canSignIn(email: email, password: pass))
         {
-            
+            weatherManager!.requestCityTemp(cityId: "5601538", completion: { cityTemp in
+                let weatherAlert = UIAlertController(title: "Погода в Москве", message: String(format: "%.0f", cityTemp), preferredStyle: .alert);
+                weatherAlert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil));
+                self.present(weatherAlert, animated: true, completion: nil);
+            })
         }
         else
         {
