@@ -16,7 +16,7 @@ public class SignInViewController : UIViewController {
     @IBOutlet weak var passTextField: UITextField!
     
     
-    var authorizationManager: AuthorizationProtocol;
+    var authorizationManager: AuthorizationProtocol? = nil;
     
     public override func viewDidLoad() {
         super.viewDidLoad();
@@ -70,24 +70,26 @@ public class SignInViewController : UIViewController {
             pass = passTextField.text!;
         }
         
-        if (authorizationManager.canSignIn(email: email, password: pass))
+        if (authorizationManager!.canSignIn(email: email, password: pass))
         {
             
         }
         else
         {
-            let emailReason = authorizationManager.validateEmail(email: email);
+            let emailReason = authorizationManager!.validateEmail(email: email);
             if (!emailReason.isEmpty)
             {
                 let invalidEmailAlert = UIAlertController(title: "Ошибка", message:  emailReason, preferredStyle: .alert);
+                invalidEmailAlert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil));
                 present(invalidEmailAlert, animated: true, completion: nil);
                 return;
             }
             
-            let passReason = authorizationManager.validatePassWord(password: pass);
+            let passReason = authorizationManager!.validatePassWord(password: pass);
             if (!passReason.isEmpty)
             {
                 let invalidPassAlert = UIAlertController(title: "Ошибка", message: passReason, preferredStyle: .alert);
+                invalidPassAlert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil));
                 present(invalidPassAlert, animated: true, completion: nil);
                 return;
             }

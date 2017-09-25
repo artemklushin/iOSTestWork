@@ -18,6 +18,11 @@ public class LocalAuthorization : AuthorizationProtocol {
     
     public func validateEmail(email: String) -> String {
 
+        if (email.isEmpty)
+        {
+            return "Email не может быть пустым";
+        }
+        
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}";
         
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
@@ -27,11 +32,16 @@ public class LocalAuthorization : AuthorizationProtocol {
         }
         else
         {
-            return "Incorect email";
+            return "Email имеет неверный формат";
         }
     }
     
     public func validatePassWord(password: String) -> String {
+        
+        if (password.isEmpty)
+        {
+            return "Пароль не может быть пустым";
+        }
         
         let emailRegEx = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{6,}$";
         
@@ -42,7 +52,7 @@ public class LocalAuthorization : AuthorizationProtocol {
         }
         else
         {
-            return "Incorect email";
+            return "Пароль недостаточно надежный";
         }
     }
 }
